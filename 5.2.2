@@ -1,0 +1,35 @@
+ Assignment 5.2 (1)
+
+library(mtcars)
+mtcars
+head(mtcars)
+tail(mtcars)
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[10:32,]))
+vec12<-union(vec1,vec2)
+vec12
+
+(2)
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[10:32,]))
+commonvec12=vec1%in%vec2
+vec1[commonvec12]
+intersect(vec1,vec2)
+unique(vec2[c%in%vec1[vec1%in%vec2]])
+
+intersect(vec1,vec2)
+Reduce(intersect, list(vec1,vec2))         
+
+(3)
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[10:32,]))
+setdiff(vec1,vec2)
+setdiff(vec2,vec1)
+
+(4)
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[11:25,]))
+identical(vec1,vec2)
+all.equal
+all.equal(vec1,vec2)
+setequal(vec1,vec2)
